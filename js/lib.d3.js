@@ -166,9 +166,10 @@ function scatterheat(dataset, container){
     .attr("cx", function (d,i) { return x(d[0]); } )
     .attr("cy", function (d) { return y(d[1]); } )
     .attr("r", 4)
-    //.attr("opacity", 0.8)
-    .on("mouseover", function(d){
-
+    .on("mouseover", function(d,i){
+      var radio = d3.select(this)
+        .transition()
+        .attr("r",8);
       tooltip.transition()
         .duration(200)
         .style("opacity", 1)
@@ -177,8 +178,13 @@ function scatterheat(dataset, container){
       tooltip.html(d[2])
         .style("left", (d3.event.pageX-20) + "px")   
         .style("top", (d3.event.pageY-50) + "px")
+        
     })
-    .on("mouseout", function(d) {    
+    //.on("mouseover", d3.select(this).transition().attr())
+    .on("mouseout", function(d) { 
+      var radio = d3.select(this)
+        .transition()
+        .attr("r",4);   
       tooltip.transition()    
         .duration(500)    
         .style("opacity", 0); 
