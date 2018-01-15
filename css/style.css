@@ -1,11 +1,10 @@
-.container-fluid{
+.container-fluid
+{
 background-color: #EBE8E8;
-
 }
 .borde {
-  border:0px;
-  border-right: solid 1px;
-  border-color:#dee2e6; 
+ padding-right:0px;
+ border:0px; 
 }
   
 .bordint1 {
@@ -13,41 +12,37 @@ background-color: #EBE8E8;
   border-radius: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 20px;   
+  margin-left: 10px;   
 }
-
+#recopilacion {
+  margin-left: 0px;
+}
 .main1 {
    border-collapse: collapse;
 }
-
 .tabladatos {
-
   color: blue;
 }
 table{
   margin: auto;
-
 }
 .ipsre:hover {
-  font-weight:bold;
+font-weight:bold;
 }
 
 span {
   float: right;
 }
-
 .titulo{
-  color: gray;
-  font-weight: bold;
+  color: #5C5C5B;
+
 }
 .titulos{
   color: gray;
-  font-weight: bold;
 }
 .dropdownini{
   color:gray;
 }
-
 a.tooltips {
   position: relative;
   display: inline;
@@ -63,7 +58,6 @@ a.tooltips span {
   text-align: left;
   visibility: hidden;
   border-radius: 6px;
-
 }
 a.tooltips span:after {
   content: '';
@@ -87,12 +81,12 @@ a:hover.tooltips span {
 .titlesal{
   margin-top: 6px;
   float:left;
+  font-family: 'Barlow Condensed', sans-serif; 
 }
-
-#uni{
-  width: 500px;
+.uni{
+  width: 450px;
+  border-bottom:solid 1px black;
 }
-
 .contdat:hover{
 transform:scale(1.004);
    }
@@ -101,4 +95,11 @@ transform:scale(1.004);
 }
 .redcolor {
   color: #EC5B5B;
+}
+.info {
+  color:gray;
+  opacity: 0.3;
+}
+.info:hover{
+  opacity: 07;
 }
