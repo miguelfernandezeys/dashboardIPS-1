@@ -1,42 +1,37 @@
 app.controller('TopIPS' ,function($scope) {
 	
 
-	$scope.mejoresIPS = function() {
-		$scope.dataset = [
-		  	{ 
-		    	"id":1,
-		   		"name":"Clinica 1"
-		  	},
-		  	{
-		  		"id":2,
-		    	"name":"Clinica 2"
-		  	},
-		  	{
-		    	"id":3,
-		    	"name":"Clinica 3"
-		  	}
-		];
-		$scope.table(dataset,[dataset.id, dataset.name], "#IPStop");
+	datasetmal = [
+    { 
+      "id":1,
+      "name":"Clinica 1"
+    },
+    {
+      "id":2,
+      "name":"Clinica 2"
+    },
+    {
+      "id":3,
+      "name":"Clinica 3"
+    }
+  ];
 
-	};
-	$scope.peoresIPS = function() {
-		$scope.dataset = [
-		  	{ 
-		    	"id":1,
-		   		"name":"Clinica 3"
-		  	},
-		  	{
-		  		"id":2,
-		    	"name":"Clinica 4"
-		  	},
-		  	{
-		    	"id":3,
-		    	"name":"Clinica 5"
-		  	}
-		];
-		$scope.table(dataset,[dataset.id, dataset.name], "#IPStop");
+  dataset = [
+      { 
+        "id":4,
+        "name":"Clinica 4"
+      },
+      {
+        "id":5,
+        "name":"Clinica 5"
+      },
+      {
+        "id":6,
+        "name":"Clinica 6"
+      }
+    ];
 
-	};
+    tabla(datasetmal, dataset, "#tablaips")
 });
 
 app.controller('Mejoraron' ,function($scope) {
@@ -55,440 +50,35 @@ app.controller('Empeoraron' ,function($scope) {
 
 app.controller("scatter", function($scope) {
     data = [
-            [13.04,-8.78, "insitituo"], 
-            [25.41,-17.93], 
-            [39.32,11.86],
-            [41.53,19.51],
-            [57.96,9.21],
-            [46.68,42.86],
-            [66.05,46.76],
-            [91.04,42.30],
-            [54.65,21.56],
-            [52.67,19.28],
-            [51.22,20.67],
-            [53.25,27.50],
-            [61.94,30.41],
-            [83.56,19.20],
-            [72.18,21.08],
-            [79.58,21.05],
-            [76.67,28.51],
-            [90.67,2.55],
-            [93.67,5.77],
-            [86.47,4.50]
+            [13.04,-8.78, "insitituo 1"], 
+            [25.41,-17.93, "insitituo 2"], 
+            [39.32,11.86, "insitituo 3"],
+            [41.53,19.51, "insitituo 4"],
+            [57.96,9.21, "insitituo 5"],
+            [46.68,42.86, "insitituo 6"],
+            [66.05,46.76, "insitituo 7"],
+            [91.04,42.30, "insitituo 8"],
+            [54.65,21.56, "insitituo 9"],
+            [52.67,19.28, "insitituo 10"],
+            [51.22,20.67, "insitituo 11"],
+            [53.25,27.50, "insitituo 12"],
+            [61.94,30.41, "insitituo 13"],
+            [83.56,19.20, "insitituo 14"],
+            [72.18,21.08, "insitituo 15"],
+            [79.58,21.05, "insitituo 16"],
+            [76.67,28.51, "insitituo 17"],
+            [90.67,2.55, "insitituo 18"],
+            [93.67,5.77, "insitituo 19"],
+            [86.47,4.50, "insitituo 20"]
     ];
     scatterheat(data, "#scatter")
 });
 
-/*app.controller('Scatter', function($scope) {
-
-    $scope.options = {
-              chart: {
-                "type": "scatterChart",
-                "height": 450,
-                "color": function(d){
-                    
-                },
-                "scatter": {
-                  "onlyCircles": false,
-                  "dispatch": {},
-                  "width": null,
-                  "height": null,
-                  "xDomain": null,
-                  "yDomain": null,
-                  "pointDomain": null,
-                  "xRange": null,
-                  "yRange": null,
-                  "pointRange": null,
-                  "forceX": [],
-                  "forceY": [],
-                  "forcePoint": [],
-                  "interactive": true,
-                  "padDataOuter": 0.1,
-                  "padData": false,
-                  "clipEdge": false,
-                  "clipVoronoi": true,
-                  "showVoronoi": false,
-                  "id": 56365,
-                  "interactiveUpdateDelay": 300,
-                  "showLabels": false,
-                  "margin": {
-                    "top": 0,
-                    "right": 0,
-                    "bottom": 0,
-                    "left": 0
-                  },
-                  "duration": 250,
-                  "useVoronoi": true
-                },
-                "showDistX": true,
-                "showDistY": true,
-                "duration": 350,
-                "xAxis": {
-                  "axisLabel": "X Axis",
-                  "dispatch": {},
-                  "axisLabelDistance": 0,
-                  "staggerLabels": false,
-                  "rotateLabels": 0,
-                  "rotateYLabel": true,
-                  "showMaxMin": true,
-                  "height": 60,
-                  "ticks": null,
-                  "width": 75,
-                  "margin": {
-                    "top": 0,
-                    "right": 0,
-                    "bottom": 0,
-                    "left": 0
-                  },
-                  "duration": 250,
-                  "orient": "bottom",
-                  "tickValues": null,
-                  "tickSubdivide": 0,
-                  "tickSize": 6,
-                  "tickPadding": 10,
-                  "domain": [
-                    0,
-                    1
-                  ],
-                  "range": [
-                    0,
-                    1
-                  ]
-                },
-                "yAxis": {
-                  "axisLabel": "Y Axis",
-                  "axisLabelDistance": -5,
-                  "dispatch": {},
-                  "staggerLabels": false,
-                  "rotateLabels": 0,
-                  "rotateYLabel": true,
-                  "showMaxMin": true,
-                  "height": 60,
-                  "ticks": null,
-                  "width": 75,
-                  "margin": {
-                    "top": 0,
-                    "right": 0,
-                    "bottom": 0,
-                    "left": 0
-                  },
-                  "duration": 250,
-                  "orient": "left",
-                  "tickValues": null,
-                  "tickSubdivide": 0,
-                  "tickSize": 6,
-                  "tickPadding": 10,
-                  "domain": [
-                    0,
-                    1
-                  ],
-                  "range": [
-                    0,
-                    1
-                  ]
-                },
-                "zoom": {
-                  "enabled": true,
-                  "scaleExtent": [
-                    1,
-                    10
-                  ],
-                  "useFixedDomain": false,
-                  "useNiceScale": false,
-                  "horizontalOff": false,
-                  "verticalOff": false,
-                  "unzoomEventType": "dblclick.zoom"
-                },
-                "dispatch": {},
-                "legend": {
-                  "dispatch": {},
-                  "width": 400,
-                  "height": 20,
-                  "align": true,
-                  "maxKeyLength": 20,
-                  "rightAlign": true,
-                  "padding": 32,
-                  "updateState": true,
-                  "radioButtonMode": false,
-                  "expanded": false,
-                  "vers": "classic",
-                  "margin": {
-                    "top": 5,
-                    "right": 0,
-                    "bottom": 5,
-                    "left": 0
-                  }
-                },
-                "distX": {
-                  "dispatch": {},
-                  "margin": {
-                    "top": 0,
-                    "right": 0,
-                    "bottom": 0,
-                    "left": 0
-                  },
-                  "width": 400,
-                  "size": 8,
-                  "duration": 250
-                },
-                "distY": {
-                  "dispatch": {},
-                  "margin": {
-                    "top": 0,
-                    "right": 0,
-                    "bottom": 0,
-                    "left": 0
-                  },
-                  "width": 400,
-                  "size": 8,
-                  "duration": 250
-                },
-                "tooltip": {
-                  "duration": 100,
-                  "gravity": "w",
-                  "distance": 25,
-                  "snapDistance": 0,
-                  "classes": null,
-                  "chartContainer": null,
-                  "enabled": true,
-                  "hideDelay": 200,
-                  "headerEnabled": true,
-                  "fixedTop": null,
-                  "offset": {
-                    "left": 0,
-                    "top": 0
-                  },
-                  "hidden": true,
-                  "data": null,
-                  "id": "nvtooltip-65002"
-                },
-                "width": null,
-                "xDomain": null,
-                "yDomain": null,
-                "pointDomain": null,
-                "xRange": null,
-                "yRange": null,
-                "pointRange": null,
-                "forceX": [],
-                "forceY": [],
-                "forcePoint": [],
-                "interactive": true,
-                "padDataOuter": 0.1,
-                "padData": false,
-                "clipEdge": false,
-                "clipVoronoi": true,
-                "showVoronoi": false,
-                "interactiveUpdateDelay": 300,
-                "showLabels": false,
-                "margin": {
-                  "top": 30,
-                  "right": 20,
-                  "bottom": 50,
-                  "left": 75
-                },
-                "useVoronoi": true,
-                "container": null,
-                "showLegend": true,
-                "showXAxis": true,
-                "showYAxis": true,
-                "defaultState": null,
-                "noData": null,
-                "rightAlignYAxis": false
-              },
-              "title": {
-                "enable": false,
-                "text": "Write Your Title",
-                "className": "h4",
-                "css": {
-                  "width": "nullpx",
-                  "textAlign": "center"
-                }
-              },
-              "subtitle": {
-                "enable": false,
-                "text": "Write Your Subtitle",
-                "css": {
-                  "width": "nullpx",
-                  "textAlign": "center"
-                }
-              },
-              "caption": {
-                "enable": false,
-                "text": "Figure 1. Write Your Caption text.",
-                "css": {
-                  "width": "nullpx",
-                  "textAlign": "center"
-                }
-              },
-              "styles": {
-                "classes": {
-                  "with-3d-shadow": true,
-                  "with-transitions": true,
-                  "gallery": false,
-                },
-                "css": {
-                }
-              }
-            }
-
-
-
-
-
-
-
-            chart: {
-                type: 'scatterChart',
-                height: 300,
-                color: [
-                    "#1f77b4",
-                      "#ff7f0e",
-                      "#2ca02c",
-                      "#d62728",
-                      "#9467bd",
-                      "#8c564b",
-                      "#e377c2",
-                      "#7f7f7f",
-                      "#bcbd22",
-                      "#17becf"
-                ],
-
-                scatter: {
-                    onlyCircles: false,
-                    dispatch:{}
-                },
-
-                tooltipContent: function(key) {
-                    console.log(key);
-                    return '<h3>' + key + '</h3>';
-                },
-                duration: 350,
-                xAxis: {
-                    axisLabel: '',
-                    tickFormat: function(d){
-                        return d3.format('.02f')(d);
-                    }
-                },
-                yAxis: {
-                    axisLabel: '',
-                    tickFormat: function(d){
-                        return d3.format('.02f')(d);
-                    },
-                    axisLabelDistance: -5
-                },
-                zoom: {
-                    enabled: true,
-                    scaleExtent: [1, 10],
-                    useFixedDomain: false,
-                    useNiceScale: false,
-                    horizontalOff: false,
-                    verticalOff: false,
-                    unzoomEventType: 'dblclick.zoom'
-                },
-                tooltip: {
-                    duration: 100,
-                    gravity: "w",
-                    distance: 1,
-                    snapDistance: 0,
-                    classes: null,
-                    chartContainer: null,
-                    enabled: true,
-                    hideDelay: 200,
-                    headerEnabled: true,
-                    valueFormatter:function (d, i) {                        
-                        return d + " " + $scope.options.chart.yAxis.axisLabel;
-                    },
-                    headerFormatter:function (d, i) {
-                        return d + " " + $scope.options.chart.xAxis.axisLabel;                
-                    },
-                    position:function () {
-                        return {
-                            left: d3.event !== null ? d3.event.clientX : 0,
-                            top: d3.event !== null ? d3.event.clientY : 0
-                        };
-                    },
-                    "fixedTop": null,
-                    "offset": {
-                        "left": 0,
-                        "top": 0
-                    },
-                    "hidden": false,
-                    "data": null,
-                    "id": "nvtooltip-15659"
-                },                  
-            },
-            
-            "title": {
-                "enable": true,
-                "text": "",
-                "className": "h4",
-                "css": {
-                  "width": "nullpx",
-                  "textAlign": "center"
-                }
-            }
-        };
-
-        */
-
-    /*
-            $scope.data = [
-
-
-            {"key":"Cluster-1",
-                    "values":[
-                        {"x":13.04,"y":-8.78,"shape":"triangle-up"},
-                        {"x":25.41,"y":-17.93,"shape":"triangle-up"},
-                        {"x":39.32,"y":-11.86,"shape":"triangle-up"},
-                        {"x":41.53,"y":-19.51,"shape":"triangle-up"},
-                        {"x":57.96,"y":-9.21,"shape":"triangle-up"}
-                    ]
-            },
- 
-            {"key":"Cluster-2",
-                    "values":[
-                        {"x":46.68,"y":-42.86,"shape":"triangle-down"},
-                        {"x":66.05,"y":-46.76,"shape":"triangle-down"},
-                        {"x":91.04,"y":-42.30,"shape":"triangle-down"}  
-                    ]
-            },
-        
-            {"key":"Cluster-3",
-                    "values":[
-                        {"x":54.65,"y":21.56,"shape":"cross"},
-                        {"x":52.67,"y":-19.28,"shape":"cross"},
-                        {"x":51.22,"y":-20.67,"shape":"cross"},
-                        {"x":53.25,"y":-27.50,"shape":"cross"}
-                    ]
-            },
-
-            {"key":"Cluster-4",
-                    "values":[
-                        {"x":61.94,"y":-30.41,"shape":"square"},
-                        {"x":83.56,"y":-19.20,"shape":"square"},
-                        {"x":72.18,"y":-21.08,"shape":"square"},
-                        {"x":79.58,"y":-21.05,"shape":"square"},
-                        {"x":76.67,"y":-28.51,"shape":"square"}
-                    ]
-                },
-
-            {"key":"Cluster-5",
-                    "values":[
-                        {"x":90.67,"y":-2.55,"shape":"circle"},
-                        {"x":93.67,"y":-5.77,"shape":"circle"},
-                        {"x":86.47,"y":-4.50,"shape":"circle"}
-                    ]
-                }
-            ];  
-   
-        
-});
-*/
 app.controller('candles', function($scope) {
     $scope.options = {
             chart: {
                 type: 'candlestickBarChart',
-                height: 450,
+                height: 240,
                 margin : {
                     top: 20,
                     right: 20,
