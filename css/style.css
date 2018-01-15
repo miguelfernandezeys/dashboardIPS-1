@@ -1,0 +1,104 @@
+.container-fluid{
+background-color: #EBE8E8;
+
+}
+.borde {
+  border:0px;
+  border-right: solid 1px;
+  border-color:#dee2e6; 
+}
+  
+.bordint1 {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;   
+}
+
+.main1 {
+   border-collapse: collapse;
+}
+
+.tabladatos {
+
+  color: blue;
+}
+table{
+  margin: auto;
+
+}
+.ipsre:hover {
+font-weight:bold;
+}
+
+span {
+  float: right;
+}
+
+.titulo{
+  color: gray;
+  font-weight: bold;
+}
+.titulos{
+  color: gray;
+  font-weight: bold;
+}
+.dropdownini{
+  color:gray;
+}
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  width:383px;
+  color: black;
+  font-size: 12px;
+  background: white;
+  height: 25px;
+  line-height: 35px;
+  text-align: left;
+  visibility: hidden;
+  border-radius: 6px;
+
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 33%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid #F7F7F7;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  top: 89px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
+.titlesal{
+  margin-top: 6px;
+  float:left;
+}
+
+#uni{
+  width: 500px;
+}
+
+.contdat:hover{
+transform:scale(1.004);
+   }
+.greencolor {
+  color: #96EC5B;
+}
+.redcolor {
+  color: #EC5B5B;
+}
